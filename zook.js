@@ -15,22 +15,25 @@ function Motion(action, options){
 	this.defaultOptions = {
 		directions: ["north", "n", "south", "s", "east", "e", "west", "w"]
 	}
-	
+	if (options == undefined) {
+		 options = this.defaultOptions;
+	} else {
 	// go through the default options. If the options that were passed in do not 
 	// include some of the keys, add them in from the defaults so options is a full set
-	for (var attrname in options) { 
-		if (options[attrname] == undefined)
-		 	options[attrname] = this.defaultOptions[attrname]; 
+		for (var attrname in this.defaultOptions) { 
+			if (options[attrname] == undefined)
+			 	options[attrname] = this.defaultOptions[attrname]; 
+		}
 	}
     	
 	
 	this.help = "Type " + action + ".direction(\"<direction word>\") in the console to " + action + " in that direction.";
 
 	this.direction = function(dir){
-		if (this.options['directions'].indexOf(dir) == -1) {
+		if (options['directions'].indexOf(dir) == -1) {
 			console.log("you can't " + action + " " + dir);
 		} else {
-			var dirText = (dir.length == 1) ? this.options['directions'][this.options['directions'].indexOf(dir) - 1 ] : dir;
+			var dirText = (dir.length == 1) ? options['directions'][options['directions'].indexOf(dir) - 1 ] : dir;
 			console.log("You " + action + " " + dirText);
 		}	
 	}
