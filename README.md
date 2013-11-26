@@ -12,6 +12,10 @@ Finish movement - Add swim() motion
 
 Add View() - create a prototype for look and search
 
+Format Console text to look better
+
+Add ascii art for verbs to display during scene transitions
+
 Health - thinking thirsty, hungry, and tired
 
 Interact with objects - take, throw, drop, read
