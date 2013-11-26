@@ -8,9 +8,9 @@ Today I want to explore JavaScript and a similar experience in the Chrome consol
 
 Todo's:
 
-Finish up movement
+Finish movement - Add swim() motion
 
-Add swim() motion
+Add View() - create a prototype for look and search
 
 Health - thinking thirsty, hungry, and tired
 
